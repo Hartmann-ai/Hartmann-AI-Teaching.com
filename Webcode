@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Workshops for Small Teams</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16232E; --muted:#4C5B67; --paper:#FAFBFB; --panel:#EEF3F4; --line:#D5DEE2;
+  --accent:#0E7C7B; --accent-ink:#FFFFFF; --warn:#8A5A12; --warn-bg:#FBF3E2;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#E7EEF1; --muted:#A3B2BB; --paper:#101A21; --panel:#18262F; --line:#2B3B46;
+  --accent:#3FB5B2; --accent-ink:#08161A; --warn:#F0C77A; --warn-bg:#2A2214;}}
+:root[data-theme="dark"]{
+  --ink:#E7EEF1; --muted:#A3B2BB; --paper:#101A21; --panel:#18262F; --line:#2B3B46;
+  --accent:#3FB5B2; --accent-ink:#08161A; --warn:#F0C77A; --warn-bg:#2A2214;}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:600;line-height:1.15;margin:0}
+h1{font-size:clamp(2.1rem,5.5vw,3.4rem);letter-spacing:-.01em;max-width:18ch}
+h2{font-size:clamp(1.5rem,3.2vw,2rem);margin-bottom:1rem}
+p{margin:0 0 1rem;max-width:62ch}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;max-width:960px;margin:0 auto}
+.brand{font-weight:600;text-decoration:none;color:var(--ink)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:600;padding:12px 22px;border-radius:6px;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+.btn.small{padding:8px 16px;font-size:.95rem}
+.hero{padding:64px 0 56px}
+.lead{font-size:1.2rem;color:var(--muted);margin:1.25rem 0 1.75rem}
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+.ask{border:1px solid var(--line);border-radius:8px;padding:18px 20px;background:var(--panel)}
+.ask.good{border-color:var(--accent);border-width:2px}
+.ask b{display:block;font-size:.95rem;margin-bottom:6px}
+.ask q{display:block;font-size:.98rem;quotes:none}
+.ask small{display:block;margin-top:10px;color:var(--muted);font-size:.9rem}
+section{padding:48px 0;border-top:1px solid var(--line)}
+ul.topics{list-style:none;margin:0;padding:0;max-width:62ch}
+ul.topics li{padding:14px 0;border-bottom:1px solid var(--line)}
+ul.topics li:last-child{border-bottom:0}
+ul.topics strong{display:block}
+ul.topics span{color:var(--muted)}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:12px 32px;margin:0}
+dt{font-weight:600}
+dd{margin:0;color:var(--muted)}
+.note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:14px 18px;max-width:62ch;font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}
+@media (max-width:680px){
+  .demo{grid-template-columns:1fr}
+  dl{grid-template-columns:1fr;gap:2px}
+  dd{margin-bottom:12px}
+  .hero{padding:40px 0}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="#top">Your Name</a>
+    <a class="btn small" href="mailto:you@example.com?subject=Workshop%20inquiry">Email me</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>AI made practical for small teams</h1>
+    <p class="lead">A hands-on workshop that shows you how to use AI tools like Claude for the work you already do, in plain language and with no technical background needed.</p>
+    <a class="btn" href="mailto:you@example.com?subject=Workshop%20inquiry">Ask about a workshop</a>
+
+    <div class="demo" aria-label="Example of a vague request compared with a specific one">
+      <div class="ask">
+        <b>A vague request</b>
+        <q>Write an email about our new hours.</q>
+        <small>You get a generic message that needs heavy rewriting.</small>
+      </div>
+      <div class="ask good">
+        <b>A specific request</b>
+        <q>I run a six-person dental office. Write a friendly 100-word email telling patients we're open Saturdays starting October 12, and mention online booking.</q>
+        <small>You get something you can send after a quick read. This difference is what the workshop teaches.</small>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>What your team will learn</h2>
+      <ul class="topics">
+        <li><strong>What AI can and can't do</strong><span>Where it saves time, and where it gets things wrong.</span></li>
+        <li><strong>How to ask for what you want</strong><span>Simple habits for writing requests that get useful answers.</span></li>
+        <li><strong>Live examples from your own work</strong><span>Emails, summaries, job posts, slide decks, and meeting notes.</span></li>
+        <li><strong>Staying safe</strong><span>Checking AI's work, and keeping customer and financial details private.</span></li>
+        <li><strong>Practice time</strong><span>Everyone tries it on a real task, and you get your questions answered.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Workshop details</h2>
+      <dl>
+        <dt>Length</dt><dd>60 to 90 minutes</dd>
+        <dt>Format</dt><dd>In person or by video call</dd>
+        <dt>Group size</dt><dd>3 to 15 people</dd>
+        <dt>Best for</dt><dd>Small firms, offices, and teams new to AI</dd>
+        <dt>Price</dt><dd>Introductory pricing. Email for a quote.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>About</h2>
+      <p>I'm Your Name. I teach people how to use AI in everyday work, starting from the basics and using tasks your team already does. Workshops are beginner-friendly, practical, and free of jargon.</p>
+      <p class="note">AI tools can make mistakes. The workshop covers how to review what they produce before you use it.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Book a workshop</h2>
+      <p>Tell me about your team and what you spend the most time on. I'll reply with a suggested plan and a price.</p>
+      <a class="btn" href="mailto:you@example.com?subject=Workshop%20inquiry">Email you@example.com</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; Your Name</div>
+</footer>
+</body>
+</html>
